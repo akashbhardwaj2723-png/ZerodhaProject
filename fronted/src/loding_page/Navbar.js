@@ -27,13 +27,12 @@ export const Navbar = () => {
                 Signup
               </Link>
             </li>
-              
-              <li className="nav-item">
+
+            <li className="nav-item">
               <Link className="nav-link text-muted mx-2" to="/Login">
                 Login
               </Link>
             </li>
-             
 
             <li className="nav-item">
               <Link className="nav-link text-muted mx-2" to="/about">
@@ -89,36 +88,36 @@ export const Navbar = () => {
           <div className="row p-4 text-center">
             <div className="col-md-3 mb-3">
               <a href="https://kite.zerodha.com/">
-              <i className="fa fa-line-chart fa-2x text-primary"></i>
+                <i className="fa fa-line-chart fa-2x text-primary"></i>
               </a>
-              
+
               <h5 className="mt-3 mb-2">Kite</h5>
               <p className="mb-0 text-muted">Trading platform</p>
             </div>
 
             <div className="col-md-3 mb-3">
-               <a href="https://console.zerodha.com/">
-               <i className="fa fa-pie-chart fa-2x text-primary"></i>
+              <a href="https://console.zerodha.com/">
+                <i className="fa fa-pie-chart fa-2x text-primary"></i>
               </a>
-             
+
               <h5 className="mt-3 mb-2">Console</h5>
               <p className="mb-0 text-muted">Backoffice</p>
             </div>
 
             <div className="col-md-3 mb-3">
               <a href="https://kite.trade/">
-              <i className="fa fa-cubes fa-2x"></i>
+                <i className="fa fa-cubes fa-2x"></i>
               </a>
-              
+
               <h5 className="mt-3 mb-2">Kite Connect</h5>
               <p className="mb-0 text-muted">Trading APIs</p>
             </div>
 
             <div className="col-md-3 mb-3">
               <a href="https://coin.zerodha.com/">
-              <i className="fa fa-circle-o fa-2x text-warning"></i>
+                <i className="fa fa-circle-o fa-2x text-warning"></i>
               </a>
-              
+
               <h5 className="mt-3 mb-2">Coin</h5>
               <p className="mb-0 text-muted">Mutual funds</p>
             </div>
@@ -149,16 +148,18 @@ export const Navbar = () => {
               <h5 className="mb-3">Updates</h5>
 
               <p className="mb-1">
-                <a href="#">Z-Connect blog</a>
+                <a href="https://zerodha.com/z-connect/">Z-Connect blog</a>
               </p>
               <p className="mb-1">
-                <a href="#">Circulars / Bulletin</a>
+                <a href="https://zerodha.com/marketintel/bulletin/">
+                  Circulars / Bulletin
+                </a>
               </p>
               <p className="mb-1">
-                <a href="#">IPOs</a>
+                <a href="https://zerodha.com/ipo/">IPOs</a>
               </p>
               <p className="mb-0">
-                <a href="#">Markets</a>
+                <a href="https://kite.zerodha.com/">Markets</a>
               </p>
             </div>
 
@@ -167,10 +168,10 @@ export const Navbar = () => {
               <h5 className="mb-3">Education</h5>
 
               <p className="mb-1">
-                <a href="#">Varsity</a>
+                <a href="https://zerodha.com/varsity/">Varsity</a>
               </p>
               <p className="mb-0">
-                <a href="#">Trading Q&amp;A</a>
+                <a href="https://tradingqna.com/">Trading Q&amp;A</a>
               </p>
             </div>
           </div>
