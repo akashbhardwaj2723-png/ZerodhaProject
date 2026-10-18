@@ -48,7 +48,14 @@ const Menu = () => {
             </li>
           ))}
         </ul>
-
+        <button
+          onClick={() => {
+            localStorage.removeItem("token");
+            window.location.href = "/login";
+          }}
+        >
+          Login
+        </button>
         <hr />
 
         <div className="profile-wrapper">
