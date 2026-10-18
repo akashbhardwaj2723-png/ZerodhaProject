@@ -19,7 +19,7 @@ useEffect(() => {
   const token = localStorage.getItem("token");
 
   axios
-    .get("http://localhost:8080/allHoldings", {
+    .get("https://zerodhaproject-fqq7.onrender.com/allHoldings", {
       headers: {
         Authorization: `Bearer ${token}`,
       },

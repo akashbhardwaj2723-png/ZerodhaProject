@@ -11,7 +11,7 @@ const Positions = () => {
     console.log("1. Token exists:", Boolean(token));
 
     axios
-      .get("http://localhost:8080/allPositions", {
+      .get("https://zerodhaproject-fqq7.onrender.com/allPositions", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
