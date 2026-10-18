@@ -305,6 +305,10 @@ app.get("/allOrders", authMiddleware,async (req, res) => {
   }
 });
 
+app.get("/", (req, res) => {
+  res.send("Zerodha Backend is running!");
+});
+
 const Port = process.env.PORT || 8080;
 const Url = process.env.Mongo_Url;
 
