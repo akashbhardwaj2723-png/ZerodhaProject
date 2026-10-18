@@ -1,0 +1,251 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+* {
+  font-family: "Inter", sans-serif;
+}
+
+.nav-link {
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: hsl(213, 99%, 51%) !important;
+}
+a{
+  text-decoration: none !important;
+}
+.may-link a{
+   color: #737c84  !important;
+   text-decoration: none !important;
+}
+.may-link a:hover{
+   color: blue !important;
+}
+.footer-link a{
+  color: #675f5f;
+}
+.footer-link a:hover{
+  color: #0b75f7;
+}
+/* footer link Stple */
+.social-links a:nth-child(5) {
+  margin-left: 0;
+}
+
+.support-navbar {
+  min-height: 90px;
+  padding: 12px 4%;
+  position: relative;
+  z-index: 1050;
+}
+
+.navbar-logo {
+  width: 190px;
+  max-width: 100%;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.navbar-right .nav-link {
+  color: #333;
+  font-size: 19px;
+  text-decoration: none;
+  padding: 8px 0;
+  white-space: nowrap;
+}
+
+.navbar-right .nav-link:hover {
+  color: #387ed1;
+}
+
+.menu-button {
+  background: transparent;
+  border: 0;
+  color: #387ed1;
+  font-size: 30px;
+  cursor: pointer;
+  padding: 0 4px;
+  line-height: 1;
+}
+
+.menu-button:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.mega-menu {
+  position: absolute;
+  top: 100%;
+  left: 1.5%;
+  width: 97%;
+  background: #fff;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.16);
+  z-index: 2000;
+}
+
+.mega-products {
+  padding: 28px 12px 22px;
+  background: #fff;
+}
+
+.product-item {
+  min-height: 170px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-decoration: none !important;
+  color: #333;
+  padding: 12px;
+}
+
+.product-item:hover {
+  background: #fafafa;
+  color: #387ed1;
+}
+
+.product-icon {
+  font-size: 36px;
+  height: 46px;
+  margin-bottom: 12px;
+  color: #387ed1;
+}
+
+.product-name {
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+.product-desc {
+  font-size: 17px;
+  color: #9299a6;
+}
+
+.mega-bottom {
+  background: #fcfcfc;
+  padding: 25px 30px 28px;
+}
+
+.mega-column {
+  padding: 0 7px;
+}
+
+.mega-column h5 {
+  font-size: 19px;
+  font-weight: 600;
+  margin-bottom: 22px;
+  color: #333;
+}
+
+.mega-link {
+  display: block;
+  width: fit-content;
+  color: #555;
+  text-decoration: none !important;
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.mega-link:hover {
+  color: #387ed1;
+}
+
+.education-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 28px;
+  color: #555;
+  text-decoration: none !important;
+  font-size: 18px;
+}
+
+.education-item:hover {
+  color: #387ed1;
+}
+
+.education-icon {
+  font-size: 42px;
+  height: 60px;
+}
+
+.varsity-icon {
+  color: #65b5ed;
+}
+
+.qa-icon {
+  color: #00b9e8;
+}
+
+@media (max-width: 991px) {
+  .support-navbar {
+    padding: 12px 18px;
+  }
+
+  .navbar-logo {
+    width: 150px;
+  }
+
+  .navbar-right {
+    gap: 12px;
+  }
+
+  .navbar-right .nav-link {
+    font-size: 15px;
+  }
+
+  .mega-menu {
+    left: 2%;
+    width: 96%;
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .navbar-right {
+    gap: 8px;
+  }
+
+  .navbar-right .nav-link {
+    display: none;
+  }
+
+  .mega-products {
+    padding: 12px;
+  }
+
+  .product-item {
+    min-height: 140px;
+  }
+
+  .mega-bottom {
+    padding: 20px;
+  }
+
+  .mega-column {
+    margin-bottom: 24px;
+  }
+
+  .mega-column:last-child {
+    margin-bottom: 0;
+  }
+}
