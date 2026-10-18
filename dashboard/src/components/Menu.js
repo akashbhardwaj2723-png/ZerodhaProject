@@ -56,6 +56,8 @@ const Menu = () => {
         >
           Login
         </button>
+
+            
         <hr />
 
         <div className="profile-wrapper">
