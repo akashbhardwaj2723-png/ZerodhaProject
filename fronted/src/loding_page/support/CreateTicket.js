@@ -1,11 +1,15 @@
-
 import React, { useState } from "react";
 
 const categories = [
   {
     title: "Account Opening",
     icon: "fa-plus-circle",
-    links: ["Online account opening", "Offline account opening", "Charges", "Documents required"],
+    links: [
+      "Online account opening",
+      "Offline account opening",
+      "Charges",
+      "Documents required",
+    ],
   },
   {
     title: "Your Zerodha Account",
@@ -15,7 +19,14 @@ const categories = [
   {
     title: "Kite",
     icon: "fa-line-chart",
-    links: ["IPO", "Trading FAQs", "Margin Trading Facility (MTF) and Margins", "Charts and orders", "Alerts and Nudges", "General"],
+    links: [
+      "IPO",
+      "Trading FAQs",
+      "Margin Trading Facility (MTF) and Margins",
+      "Charts and orders",
+      "Alerts and Nudges",
+      "General",
+    ],
   },
   {
     title: "Funds",
@@ -45,6 +56,10 @@ const quickLinks = [
 export const CreateTicket = () => {
   const [openIndex, setOpenIndex] = useState(null);
 
+  const handleLinkClick = (link) => {
+    console.log("Selected:", link);
+  };
+
   return (
     <div className="container-fluid py-5 px-4">
       <div className="row">
@@ -53,10 +68,8 @@ export const CreateTicket = () => {
           {categories.map((category, index) => (
             <div className="card rounded-0 mb-3" key={category.title}>
               <div
-                className="card-header bg-white  border-0"
-                onClick={() =>
-                  setOpenIndex(openIndex === index ? null : index)
-                }
+                className="card-header bg-white border-0"
+                onClick={() => setOpenIndex(openIndex === index ? null : index)}
                 style={{ cursor: "pointer" }}
               >
                 <div className="d-flex align-items-center">
@@ -67,15 +80,16 @@ export const CreateTicket = () => {
                     <i className={`fa ${category.icon} fa-lg`}></i>
                   </div>
 
-                  <span className="ml-3 flex-grow-1" style={{ fontSize: "20px" }}>
+                  <span
+                    className="ml-3 flex-grow-1"
+                    style={{ fontSize: "20px" }}
+                  >
                     {category.title}
                   </span>
 
                   <i
                     className={`fa ${
-                      openIndex === index
-                        ? "fa-chevron-up"
-                        : "fa-chevron-down"
+                      openIndex === index ? "fa-chevron-up" : "fa-chevron-down"
                     } text-primary mr-4`}
                   ></i>
                 </div>
@@ -86,9 +100,13 @@ export const CreateTicket = () => {
                   <ul className="mb-0 pl-4">
                     {category.links.map((link) => (
                       <li className="py-2 text-primary" key={link}>
-                        <a href="#" className="text-primary">
+                        <button
+                          type="button"
+                          className="btn btn-link text-primary p-0 text-decoration-none"
+                          onClick={() => handleLinkClick(link)}
+                        >
                           {link}
-                        </a>
+                        </button>
                       </li>
                     ))}
                   </ul>
@@ -109,32 +127,45 @@ export const CreateTicket = () => {
           >
             <ul className="mb-0 pl-4">
               <li className="mb-3">
-                <a href="#" className="text-primary">
+                <button
+                  type="button"
+                  className="btn btn-link text-primary p-0 text-left text-decoration-none"
+                  onClick={() =>
+                    handleLinkClick(
+                      "Surveillance measure on scrips - October 2026",
+                    )
+                  }
+                >
                   Surveillance measure on scrips - October 2026
-                </a>
+                </button>
               </li>
               <li>
-                <a href="#" className="text-primary">
+                <button
+                  type="button"
+                  className="btn btn-link text-primary p-0 text-left text-decoration-none"
+                  onClick={() =>
+                    handleLinkClick("Current Buybacks - October 2026")
+                  }
+                >
                   Current Buybacks - October 2026
-                </a>
+                </button>
               </li>
             </ul>
           </div>
 
           <div className="card rounded-0">
-            <div className="card-header bg-light">
-              Quick links
-            </div>
+            <div className="card-header bg-light">Quick links</div>
 
             <div className="list-group list-group-flush">
               {quickLinks.map((link, index) => (
-                <a
-                  href="#"
-                  className="list-group-item list-group-item-action text-primary"
+                <button
+                  type="button"
+                  className="list-group-item list-group-item-action text-primary text-left"
                   key={link}
+                  onClick={() => handleLinkClick(link)}
                 >
                   {index + 1}. {link}
-                </a>
+                </button>
               ))}
             </div>
           </div>
