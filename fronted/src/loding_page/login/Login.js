@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import axios from "axios";
 
@@ -25,18 +24,19 @@ export const Login = () => {
 
     try {
       const res = await axios.post(
-        "http://localhost:8080/api/auth/login",
-        formData
+        "https://zerodhaproject-fqq7.onrender.com/api/auth/login",
+        formData,
       );
 
       // Save JWT token after successful login
       localStorage.setItem("token", res.data.token);
 
       alert("Login successful!");
+
       console.log(res.data);
 
       // Redirect to dashboard
-      window.location.href = "/";
+     window.location.href = "https://zerodha-dashboard-static.onrender.com/";
     } catch (error) {
       alert(error.response?.data?.message || "Login failed");
       console.log(error.response?.data || error.message);
